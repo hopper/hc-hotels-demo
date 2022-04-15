@@ -1,0 +1,95 @@
+{
+  "id": "123",
+  "name": "Example Hotel",
+  "currency": {"code":  "USD", "symbol":  "$"},
+  "rooms": [
+    {
+      "id": "-test",
+      "name": "Preferred Two Queens",
+      "picture": "/a/i/room/1.jpg",
+      "beds": 2,
+      "availability": 8,
+      "details": [
+        "Free WiFi",
+        "Breakfast Included"
+      ],
+      "price": {
+        "amount": "170"
+      }
+    },
+    {
+      "id": "2-test",
+      "name": "Deluxe King",
+      "picture": "/a/i/room/2.jpg",
+      "beds": 1,
+      "availability": 2,
+      "details": [
+        "Free WiFi",
+        "Breakfast Included",
+        "Non-refundable"
+      ],
+      "price": {
+        "amount": "230"
+      }
+    },
+    {
+      "id": "3-test",
+      "name": "Preferred Corner King",
+      "picture": "/a/i/room/3.jpg",
+      "beds": 1,
+      "availability": 3,
+      "details": [
+        "Free WiFi",
+        "Breakfast Included",
+        "Free cancellation before 2030"
+      ],
+      "price": {
+        "amount": "227"
+      }
+    },
+    {
+      "id": "4-test",
+      "name": "Deluxe King",
+      "picture": "/a/i/room/4.jpg",
+      "beds": 1,
+      "availability": 0,
+      "details": [
+        "Free WiFi",
+        "Breakfast Included",
+        "Non-refundable"
+      ],
+      "price": {
+        "amount": "230"
+      }
+    },
+    {
+      "id": "5-test",
+      "name": "Preferred Two Doubles",
+      "picture": "/a/i/room/5.jpg",
+      "beds": 2,
+      "availability": 8,
+      "details": [
+        "Free WiFi",
+        "Breakfast Included"
+      ],
+      "price": {
+        "amount": "218"
+      }
+    },
+    {
+      "id": "6-test",
+      "name": "Deluxe Queen Room with Two Queen Beds - Hearing Accessible",
+      "picture": "/a/i/room/6.jpg",
+      "beds": 4,
+      "availability": 8,
+      "details": [
+        "Free WiFi",
+        "Breakfast Included"
+      ],
+      "price": {
+        "amount": "230"
+      }
+    }
+  ],
+  "nextRooms": "example1.page2.json"
+}

@@ -1,0 +1,60 @@
+{
+  "rooms": [
+    {
+      "id": "7-test",
+      "name": "Single Room",
+      "picture": "/a/i/room/7.jpg",
+      "beds": 1,
+      "availability": 0,
+      "details": [
+        "Breakfast Included"
+      ],
+      "price": {
+        "amount": "80"
+      }
+    },
+    {
+      "id": "8-test",
+      "name": "One-Bedroom Queen Suite with Tub",
+      "picture": "/a/i/room/8.jpg",
+      "beds": 1,
+      "availability": 4,
+      "details": [
+        "Free WiFi",
+        "Breakfast Included",
+        "Non-refundable"
+      ],
+      "price": {
+        "amount": "800"
+      }
+    },
+    {
+      "id": "9-test",
+      "name": "Deluxe Two Doubles\n",
+      "picture": "/a/i/room/9.jpg",
+      "beds": 1,
+      "details": [
+        "Free WiFi",
+        "Pay nothing until 2022",
+        "Non-refundable"
+      ],
+      "price": {
+        "amount": "199"
+      }
+    },
+    {
+      "id": "10-test",
+      "name": "Deluxe Two Queens",
+      "picture": "/a/i/room/10.jpg",
+      "beds": 2,
+      "details": [
+        "Free WiFi",
+        "Breakfast Included",
+        "Non-refundable"
+      ],
+      "price": {
+        "amount": "208"
+      }
+    }
+  ]
+}

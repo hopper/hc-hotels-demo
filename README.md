@@ -1,1 +1,1 @@
-# hc-hotels-demo
+# Hopper Cloud Hotel Demo

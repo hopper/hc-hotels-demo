@@ -1,0 +1,7 @@
+/dist
+
+/*.json
+/*.js
+
+*-lock.yaml
+*.log

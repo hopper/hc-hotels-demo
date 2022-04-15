@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Example Hotel</title>
+  <link rel="stylesheet" type="text/css" href="/react/styles/demo.css">
+
+  <!-- Hopper Load V1 SDK: START -->
+  <script>
+    (function(h,p,l,s,g,d){g=window;d=document;s=d.createElement("script");s.src=h+"/cloud/hotels/v1/"+p+"/"+(l||"en")+".js";s.async=!0;s.type="module";g.__HC__=[];d.head.appendChild(s);g.hcPriceFreeze=function(){g.__HC__.push(Array.prototype.slice.call(arguments))}})
+    ("https://hopper-sdk-benchmark.mount.dev", "PARTNER", "en")
+  </script>
+  <!-- Hopper Load V1 SDK: END -->
+
+  <script>window._MOCK_DATA_ = JSON.parse('{"id":"123","name":"Example Hotel","currency":{"code":"USD","symbol":"$"},"rooms":[{"id":"-test","name":"Preferred Two Queens","picture":"/a/i/room/1.jpg","beds":2,"availability":8,"details":["Free WiFi","Breakfast Included"],"price":{"amount":"170"}},{"id":"2-test","name":"Deluxe King","picture":"/a/i/room/2.jpg","beds":1,"availability":2,"details":["Free WiFi","Breakfast Included","Non-refundable"],"price":{"amount":"230"}},{"id":"3-test","name":"Preferred Corner King","picture":"/a/i/room/3.jpg","beds":1,"availability":3,"details":["Free WiFi","Breakfast Included","Free cancellation before 2030"],"price":{"amount":"227"}},{"id":"4-test","name":"Deluxe King","picture":"/a/i/room/4.jpg","beds":1,"availability":0,"details":["Free WiFi","Breakfast Included","Non-refundable"],"price":{"amount":"230"}},{"id":"5-test","name":"Preferred Two Doubles","picture":"/a/i/room/5.jpg","beds":2,"availability":8,"details":["Free WiFi","Breakfast Included"],"price":{"amount":"218"}},{"id":"6-test","name":"Deluxe Queen Room with Two Queen Beds - Hearing Accessible","picture":"/a/i/room/6.jpg","beds":4,"availability":8,"details":["Free WiFi","Breakfast Included"],"price":{"amount":"230"}}],"nextRooms":"example1.page2.json"}')</script>
+</head>
+<body>
+  <header class="Header">
+    <nav class="Header-nav">
+      <!-- TODO: add currency and login example -->
+    </nav>
+    <a class="Header-logo" href="/" title="Demo Logo">
+      <svg width="188.54" height="29.56" viewBox="0 0 49.89 7.82"><g style="stroke-width:1"><path d="M58.64 83.96v7.56h2.86q.86 0 1.33-.31.48-.32.71-.84.24-.53.3-1.2.05-.7.05-1.43 0-.74-.05-1.42-.06-.69-.3-1.2-.23-.54-.7-.84-.48-.32-1.34-.32zm1.97 6.14v-4.72h.4q.28 0 .45.08.17.08.25.33.1.25.12.72.03.47.03 1.23t-.03 1.22q-.02.47-.12.72-.08.26-.25.34-.17.08-.46.08zM64.72 83.96v7.56h4.57V89.9h-2.6v-1.5h2.35v-1.55h-2.35v-1.3h2.5v-1.6zM69.94 83.96v7.56h1.84v-5.63h.02l1.05 5.63h1.41l1.05-5.63h.02v5.63h1.84v-7.56h-2.81l-.8 4.48h-.02l-.79-4.48zM79.84 87.74q0-.76.02-1.26.02-.51.09-.8.07-.3.2-.42t.36-.12q.22 0 .35.12.13.12.2.41.07.3.1.8l.01 1.27q0 .76-.02 1.27-.02.5-.1.8-.06.29-.2.4-.12.12-.34.12-.23 0-.36-.12-.13-.11-.2-.4-.07-.3-.09-.8-.02-.51-.02-1.27zm-2.03 0q0 1.06.14 1.8.13.75.45 1.22t.84.67q.51.2 1.27.2.75 0 1.27-.2.51-.2.83-.67.32-.47.46-1.21.14-.75.14-1.81t-.14-1.8q-.14-.75-.46-1.22-.32-.48-.83-.69-.52-.22-1.27-.22-.76 0-1.27.22-.52.21-.84.7-.32.46-.45 1.2-.14.75-.14 1.8zM86.67 83.96v7.56h4.4V89.9h-2.43v-5.95zM93.38 87.74q0-.76.02-1.26.02-.51.08-.8.08-.3.2-.42.14-.12.37-.12.22 0 .34.12.14.12.2.41.08.3.1.8.02.5.02 1.27 0 .76-.02 1.27-.02.5-.1.8-.06.29-.2.4-.12.12-.34.12-.23 0-.36-.12-.13-.11-.2-.4-.07-.3-.09-.8-.02-.51-.02-1.27zm-2.03 0q0 1.06.13 1.8.14.75.46 1.22t.84.67q.51.2 1.27.2.75 0 1.27-.2.51-.2.83-.67.32-.47.46-1.21.13-.75.13-1.81t-.13-1.8q-.14-.75-.46-1.22-.32-.48-.83-.69-.52-.22-1.27-.22-.76 0-1.27.22-.52.21-.84.7-.32.46-.46 1.2-.13.75-.13 1.8zM100 87.4v1.34h.7q0 .49-.05.8-.05.31-.13.5-.09.16-.21.23-.12.06-.28.06-.22 0-.36-.12-.12-.11-.2-.4-.06-.3-.08-.8-.02-.51-.02-1.27t.02-1.26q.02-.51.08-.8.08-.3.21-.42.15-.12.4-.12.34 0 .45.33.1.28.1.88h1.91q0-.69-.18-1.16-.18-.49-.5-.8-.31-.3-.76-.44-.43-.14-.95-.14-.87 0-1.42.27-.55.25-.87.75-.3.5-.42 1.22-.1.73-.1 1.69 0 .94.05 1.67.06.73.28 1.23.22.5.66.75.43.24 1.18.24.26 0 .5-.03.25-.03.47-.1.22-.09.39-.25.18-.16.27-.4h.02l.05.67h1.33V87.4zM105.16 87.74q0-.76.02-1.26.02-.51.09-.8.07-.3.2-.42.14-.12.36-.12.22 0 .35.12.13.12.2.41.07.3.1.8l.01 1.27q0 .76-.02 1.27-.02.5-.1.8-.06.29-.2.4-.12.12-.34.12-.22 0-.36-.12-.13-.11-.2-.4-.07-.3-.09-.8-.02-.51-.02-1.27zm-2.03 0q0 1.06.14 1.8.13.75.45 1.22t.84.67q.52.2 1.27.2t1.27-.2q.52-.2.83-.67.32-.47.46-1.21.14-.75.14-1.81t-.14-1.8q-.14-.75-.46-1.22-.31-.48-.83-.69-.52-.22-1.27-.22t-1.27.22q-.52.21-.84.7-.32.46-.45 1.2-.14.75-.14 1.8z" transform="translate(-58.64 -83.81)"/></g></svg>
+    </a>
+  </header>
+
+  <div class="PDPHero">
+    <header>
+      <div class="PDPHero-gallery">
+        <img src="/a/i/hotel/1-hero.jpg" alt="Featured Image" /><img src="/a/i/hotel/2-hero.jpg" alt="Lobby" loading="lazy" /><img src="/a/i/hotel/3-hero.jpg" alt="Reception" loading="lazy" /><img src="/a/i/hotel/4-hero.jpg" alt="Lobby Sitting Area" loading="lazy" /><img src="/a/i/hotel/5-hero.jpg" alt="Interior Entrance" loading="lazy" />
+      </div>
+
+      <div class="PDPHero-header">
+        <h1 class="PDPHero-name">Example Hotel <span class="PDPHero-starRating" role="img" aria-label="4 Star Hotel" style="--rating:4"></span></h1>
+        <div class="PDPHero-address">100 Main Street Neddick, ME 01234, United States</div>
+      </div>
+
+      <!-- Hopper SDK: Hotel Metadata -->
+      <pf-hotel-meta hotel-id="h123" name="Example Hotel" star-rating="4" city="Neddick" country="US"></pf-hotel-meta>
+    </header>
+  </div>
+
+  <main>
+    <div class="PDP">
+      <h2>Property details:</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et tincidunt lacus, id porttitor magna. Nulla rutrum efficitur hendrerit. Morbi tristique arcu velit, in consectetur velit euismod ut. Suspendisse potenti. Praesent dictum, lectus sit amet tristique posuere, nulla urna pretium orci, in lacinia odio dui in lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce sollicitudin mauris eu ipsum hendrerit dignissim. Mauris vestibulum sagittis eros. Integer non tincidunt velit. Mauris congue dui ut risus facilisis consectetur eget vel risus. Quisque lobortis fringilla ligula, eget rutrum nisl lobortis sit amet. Proin congue aliquet mauris et vestibulum. In consequat quis orci eu tempor. Aenean facilisis malesuada mollis.</p>
+      <div class="Rooms">
+        <h2>Choose your room:</h2>
+        <section id="rooms"></section>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="/react/src/main.tsx"></script>
+  <footer>
+    example footer
+  </footer>
+</body>
+</html>
