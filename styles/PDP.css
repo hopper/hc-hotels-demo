@@ -1,0 +1,7 @@
+.PDP {
+  width: 100%;
+  min-width: 320px;
+  max-width: 1220px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+}

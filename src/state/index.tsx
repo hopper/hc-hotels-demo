@@ -31,21 +31,23 @@ export const requestHotelRooms = (
 ) => {
   dispatch(loading(true));
 
-  fetch(url)
-    .then((resp) => resp.json())
-    .then((hotel: Hotel) => {
-      if (delay > 0) {
-        setTimeout(() => {
-          dispatch(fetchedHotelRooms(hotel, more));
-        }, delay);
-      } else {
+  // NOTE: hacky way of delaying api call
+  const f = () => {
+    fetch(url)
+      .then((resp) => resp.json())
+      .then((hotel: Hotel) => {
         dispatch(fetchedHotelRooms(hotel, more));
-      }
-    })
-    .catch((err) => {
-      console.error('failed to load rooms', err);
-      dispatch(loading(false)); // TODO: display an error
-    });
+      })
+      .catch((err) => {
+        console.error('failed to load rooms', err);
+        dispatch(loading(false)); // TODO: display an error
+      });
+  };
+  if (delay) {
+    setTimeout(f, delay);
+  } else {
+    f();
+  }
 };
 
 interface HotelRoom {

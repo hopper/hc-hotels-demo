@@ -1,7 +1,7 @@
 {
   "id": "123",
   "name": "Example Hotel",
-  "currency": {"code":  "USD", "symbol":  "$"},
+  "currency": { "code": "USD", "symbol": "$" },
   "rooms": [
     {
       "id": "-test",
@@ -9,10 +9,7 @@
       "picture": "/a/i/room/1.jpg",
       "beds": 2,
       "availability": 8,
-      "details": [
-        "Free WiFi",
-        "Breakfast Included"
-      ],
+      "details": ["Free WiFi", "Breakfast Included"],
       "price": {
         "amount": "170"
       }
@@ -23,11 +20,7 @@
       "picture": "/a/i/room/2.jpg",
       "beds": 1,
       "availability": 2,
-      "details": [
-        "Free WiFi",
-        "Breakfast Included",
-        "Non-refundable"
-      ],
+      "details": ["Free WiFi", "Breakfast Included", "Non-refundable"],
       "price": {
         "amount": "230"
       }
@@ -53,11 +46,7 @@
       "picture": "/a/i/room/4.jpg",
       "beds": 1,
       "availability": 0,
-      "details": [
-        "Free WiFi",
-        "Breakfast Included",
-        "Non-refundable"
-      ],
+      "details": ["Free WiFi", "Breakfast Included", "Non-refundable"],
       "price": {
         "amount": "230"
       }
@@ -68,10 +57,7 @@
       "picture": "/a/i/room/5.jpg",
       "beds": 2,
       "availability": 8,
-      "details": [
-        "Free WiFi",
-        "Breakfast Included"
-      ],
+      "details": ["Free WiFi", "Breakfast Included"],
       "price": {
         "amount": "218"
       }
@@ -82,10 +68,7 @@
       "picture": "/a/i/room/6.jpg",
       "beds": 4,
       "availability": 8,
-      "details": [
-        "Free WiFi",
-        "Breakfast Included"
-      ],
+      "details": ["Free WiFi", "Breakfast Included"],
       "price": {
         "amount": "230"
       }

@@ -1,0 +1,20 @@
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex: 2;
+  background: var(--header-bg-color);
+  color: var(--header-fg-color);
+}
+
+.Header-logo {
+  margin: 0 1rem;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+.Header-logo > svg {
+  height: 30px;
+  fill: #fff;
+}

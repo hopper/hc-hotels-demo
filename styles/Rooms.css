@@ -1,0 +1,29 @@
+.Rooms {
+  display: block;
+}
+
+.Rooms > section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.Rooms > section > form {
+  display: none;
+}
+
+.Rooms > h2 {
+  font-size: 1.4rem;
+}
+
+.Rooms-more {
+  width: 100%;
+  line-height: 2.5rem;
+  cursor: pointer;
+}
+.Rooms-loading {
+  margin: 1rem;
+  text-align: center;
+  width: 100%;
+}

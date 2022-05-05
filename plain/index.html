@@ -2,87 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <title>Demo: Hotel Room Price Freeze</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-  <title>Demo: Hotel Room Price Freeze</title>
-  <STYLE>
-      body { font: 16px/1.5 'Helvetica Neue', sans-serif; }
-      h1 { text-align: center; }
-      dl { margin: 3rem auto; max-width: 800px; }
-      dt { display: inline-block; width: 20%; text-align: right; padding: 0.5rem 1rem; line-height: 4rem; }
-      dd { display: inline-block; width: 70%; margin-inline: 0 }
-      nav { position: absolute; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; padding: 3px 1rem; }
-      nav a { color: #000000; text-decoration: none }
-  </STYLE>
-  <script>const locale = (new URLSearchParams(window.location.search)).get("locale");</script>
 
-  <!-- Hopper Load V1 SDK: START -->
+  <script>const locale = (new URLSearchParams(window.location.search)).get("locale")</script>
+
+  <!-- Hopper Load SDK-->
   <script>
-    (function(h,p,l,s,g,d){g=window;d=document;s=d.createElement("script");s.src=h+"/cloud/hotels/v1/"+p+"/"+(l||"en")+".js";s.async=!0;s.type="module";g.__HC__=[];d.head.appendChild(s);g.hcPriceFreeze=function(){g.__HC__.push(Array.prototype.slice.call(arguments))}})
-    ("https://hopper-sdk-benchmark.mount.dev", "PARTNER", locale || "en")
+    (function(p,l,h,s,d){d=document;s=d.createElement("script");s.src=(h||"https://sdk.hc-demos.com")+"/cloud/hotels/v1/"+p+"/"+(l||"en")+".js";s.type="module";s.async=!0;d.head.appendChild(s)})
+    ("PARTNER", locale, "http://localhost:4000")
   </script>
-  <!-- Hopper Load V1 SDK: END -->
 
-  <!-- Hopper Demo Button Overrides -->
   <STYLE>
-    .hide-buttons {
-        --pf-button-loading-visibility: hidden;
-    }
+      body { font: 16px/1.5 'Helvetica Neue', sans-serif; padding: 1rem 0 0 }
+      nav { position: absolute; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; padding: 3px 1rem }
+      nav a { color: #000000; text-decoration: none }
+      section { margin: 1.5rem auto 0; max-width: 600px; padding: 0; text-align: center }
+      p { margin: 0.2rem 0; font-style: italic }
+      .room { height: 3.5rem; margin: 0 0 1rem}
   </STYLE>
 </head>
 <body>
+<nav>
+  <a href="/">&lt; back</a>
+  <form method="GET" onchange="this.submit()">
+    <select name="locale" required><option disabled selected>Select Language</option><option value="en">English</option><option value="ko">한국어</option><option value="--">INVALID</option></select>
+  </form>
+</nav>
+
 <!-- Hopper SDK: User Data if logged in - OPTIONAL -->
 <pf-identify-user user-id="u567" email="example@example.com" phone-number="+1 206 555 0100"></pf-identify-user>
 
 <!-- Hopper SDK: Customer Booking Metadata -->
-<pf-booking-meta currency="USD" checkin="2022-12-12" checkout="2022-12-20" rooms="1" adults="2" children="1"></pf-booking-meta>
+<pf-booking-meta currency="USD" checkin="2022-12-12" checkout="2022-12-20" room-count="1" adult-count="2" child-count="1"></pf-booking-meta>
 
 <!-- Hopper SDK: Hotel Metadata -->
-<pf-hotel-meta hotel-id="h123" name="Example Hotel" star-rating="4.5" city="Neddick" country="US"></pf-hotel-meta>
+<pf-hotel-meta hotel-id="h123" name="Example Hotel" star-rating="4.5" address-city="Neddick" address-country="US"></pf-hotel-meta>
 
-<!-- Hopper SDK: Room Buttons visible -->
-<dl>
-  <dt>Show Freeze</dt>
-  <dd><pf-room-button name="Priced Room" beds="1" price="200.00" availability="9" image-url="/a/i/room/8.jpg" merchant-id="m890"></pf-room-button></dd>
-  <dt>Show Knockout</dt>
-  <dd><pf-room-button name="Knockout" beds="1" price="400.00" availability="0" image-url="/a/i/room/9.jpg" merchant-id="m890"></pf-room-button></dd>
-</dl>
+<!-- Hopper SDK: Room Buttons -->
+<section class="fade">
+  <p>Loading</p>
+  <div class="room"><pf-room-button room-id="a123" name="Priced Room" beds="1" price="200.00" availability="9" image-url="/a/i/room/8.jpg" merchant-id="m890"></pf-room-button></div>
+  <div class="room"><pf-room-button room-id="b123" name="Knockout" beds="1" price="400.00" availability="0" image-url="/a/i/room/9.jpg" merchant-id="m890"></pf-room-button></div>
+</section>
 
-<!-- Hopper SDK: Room Buttons hidden -->
-<dl class="hide-buttons">
-  <dt>Hide Freeze</dt>
-  <dd><pf-room-button name="Priced Room" beds="1" price="200.00" availability="9" image-url="/a/i/room/8.jpg" merchant-id="m890"></pf-room-button></dd>
-  <dt>Hide Knockout</dt>
-  <dd><pf-room-button name="Knockout" beds="1" price="400.00" availability="0" image-url="/a/i/room/9.jpg" merchant-id="m890"></pf-room-button></dd>
-</dl>
-
-<!-- Hopper SDK: Events -->
+<!-- Hopper SDK: Event Listeners -->
 <script>
-  document.addEventListener('pf-init', function() {
-    console.warn("Price Freeze Initialized")
-  })
-  document.addEventListener('pf-offer', function(evt) {
-    console.warn("Price Freeze Offer", evt.detail)
-  })
-  document.addEventListener('pf-opened', function(evt) {
-    console.warn("Opened Price Freeze", evt.detail)
-  })
-  document.addEventListener('pf-closed', function(evt) {
-    console.warn("Closed Price Freeze", evt.detail)
-  })
+  document.addEventListener('pf-init', function() { console.warn("Hopper SDK Initialized") })
+  document.addEventListener('pf-offer', function(evt) { console.warn("Price Freeze Offer", evt.detail) })
+  document.addEventListener('pf-opened', function(evt) { console.warn("Opened Price Freeze", evt.detail) })
+  document.addEventListener('pf-closed', function(evt) { console.warn("Closed Price Freeze", evt.detail) })
 </script>
-
-<nav>
-  <a href="/">&lt; back</a>
-  <form method="GET" onchange="this.submit()">
-    <select name="locale" required>
-      <option disabled selected>Select Language</option>
-      <option value="en">English</option>
-      <option value="ko">한국어</option>
-      <option value="--">INVALID</option>
-    </select>
-  </form>
-</nav>
-
 </body>
 </html>

@@ -55,7 +55,7 @@ export default function HotelRooms({ hotel, delay }: Props) {
       ></pf-booking-meta>
 
       {state.loading ? (
-        <div className={'Rooms-loading'}>Loading</div>
+        <div className={'Rooms-loading'}>Loading...</div>
       ) : undefined}
 
       <div ref={roomsEl}>
@@ -84,7 +84,11 @@ export default function HotelRooms({ hotel, delay }: Props) {
       </div>
 
       {state.hotel?.nextRooms ? (
-        <button className={'Rooms-more'} onClick={onMore}>
+        <button
+          className={'Rooms-more'}
+          onClick={onMore}
+          disabled={state.loading}
+        >
           Load More
         </button>
       ) : undefined}

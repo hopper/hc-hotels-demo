@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  background-color: transparent;
+}
+
+img {
+  border-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Oswald', sans-serif;
+}
+
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  line-height: 1.15;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body > main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  flex: 3;
+}
+
+body > footer {
+  font: normal 14px sans-serif;
+  background: #d2d5cc;
+  color: #000000;
+  flex: 4;
+  text-align: center;
+  margin-top: auto;
+  padding: 2rem 1rem;
+}

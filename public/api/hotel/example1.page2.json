@@ -6,9 +6,7 @@
       "picture": "/a/i/room/7.jpg",
       "beds": 1,
       "availability": 0,
-      "details": [
-        "Breakfast Included"
-      ],
+      "details": ["Breakfast Included"],
       "price": {
         "amount": "80"
       }
@@ -19,11 +17,7 @@
       "picture": "/a/i/room/8.jpg",
       "beds": 1,
       "availability": 4,
-      "details": [
-        "Free WiFi",
-        "Breakfast Included",
-        "Non-refundable"
-      ],
+      "details": ["Free WiFi", "Breakfast Included", "Non-refundable"],
       "price": {
         "amount": "800"
       }
@@ -33,11 +27,7 @@
       "name": "Deluxe Two Doubles\n",
       "picture": "/a/i/room/9.jpg",
       "beds": 1,
-      "details": [
-        "Free WiFi",
-        "Pay nothing until 2022",
-        "Non-refundable"
-      ],
+      "details": ["Free WiFi", "Pay nothing until 2022", "Non-refundable"],
       "price": {
         "amount": "199"
       }
@@ -47,11 +37,7 @@
       "name": "Deluxe Two Queens",
       "picture": "/a/i/room/10.jpg",
       "beds": 2,
-      "details": [
-        "Free WiFi",
-        "Breakfast Included",
-        "Non-refundable"
-      ],
+      "details": ["Free WiFi", "Breakfast Included", "Non-refundable"],
       "price": {
         "amount": "208"
       }
