@@ -10,11 +10,11 @@ declare namespace JSX {
     };
     'pf-booking-meta': {
       currency?: string;
-      checkin: string | Date;
-      checkout: string | Date;
-      rooms: number;
-      adults: number;
-      children?: number;
+      'check-in': string | Date;
+      'check-out': string | Date;
+      'room-count': number;
+      'adult-count': number;
+      'child-count'?: number;
     };
     'pf-room-button': {
       name: string;

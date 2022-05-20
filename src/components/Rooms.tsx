@@ -48,10 +48,10 @@ export default function HotelRooms({ hotel, delay }: Props) {
 
       <pf-booking-meta
         currency={'USD'}
-        checkin={checkin.toISOString().substring(0, 10)}
-        checkout={checkout.toISOString().substring(0, 10)}
-        rooms={rooms}
-        adults={adults}
+        check-in={checkin.toISOString().substring(0, 10)}
+        check-out={checkout.toISOString().substring(0, 10)}
+        room-count={rooms}
+        adult-count={adults}
       ></pf-booking-meta>
 
       {state.loading ? (
@@ -71,6 +71,7 @@ export default function HotelRooms({ hotel, delay }: Props) {
             >
               <button>Reserve</button>
               <pf-room-button
+                room-id={id}
                 name={name}
                 beds={beds}
                 price={price.amount}
