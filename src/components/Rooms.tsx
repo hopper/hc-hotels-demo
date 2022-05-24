@@ -52,6 +52,7 @@ export default function HotelRooms({ hotel, delay }: Props) {
         check-out={checkout.toISOString().substring(0, 10)}
         room-count={rooms}
         adult-count={adults}
+        child-count="0"
       ></pf-booking-meta>
 
       {state.loading ? (
