@@ -14,7 +14,7 @@ declare namespace JSX {
       'check-out': string | Date;
       'room-count': number;
       'adult-count': number;
-      'child-count'?: number;
+      'child-count'?: string;
     };
     'pf-room-button': {
       name: string;
