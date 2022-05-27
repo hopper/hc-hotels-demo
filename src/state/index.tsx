@@ -58,6 +58,15 @@ interface HotelRoom {
   details: Array<string>;
   beds: number;
   availability: number;
+  type: string;
+  merchantId: string;
+  merchantRoomId: string;
+  cancellationCode: string;
+  rateCategoryId: string;
+  promotion?: {
+    id: string;
+    expiry: string;
+  },
 }
 
 export interface Hotel {

@@ -30,11 +30,6 @@ export default function HotelRooms({ hotel, delay }: Props) {
   );
 
   const roomsEl = useRef<HTMLDivElement>(null);
-  // useEffect(() => {
-  //   roomsEl.current?.addEventListener('pf-opended', (evt: any) => {
-  //     console.log('opened', evt);
-  //   });
-  // }, [roomsEl]);
 
   const { checkin, checkout, rooms, adults } = state;
   const moreUri = state.hotel?.nextRooms;
@@ -61,7 +56,7 @@ export default function HotelRooms({ hotel, delay }: Props) {
 
       <div ref={roomsEl}>
         {state.hotel?.rooms?.map(
-          ({ id, name, beds, details, price, availability, picture }) => (
+          ({ id, name, beds, details, price, availability, picture, type, merchantId, merchantRoomId, promotion, cancellationCode, rateCategoryId }) => (
             <Room
               key={id}
               id={id}
@@ -76,15 +71,15 @@ export default function HotelRooms({ hotel, delay }: Props) {
                 name={name}
                 beds={beds}
                 price={price.amount}
-                merchant-id={'m123'}
+                merchant-id={merchantId}
                 image-url={picture}
                 availability={availability}
-                type={'room-type-1'}
-                cancellation-code={'cancellation-code'}
-                merchant-room-id={'merchant-room-1'}
-                promotion-id={'promotion-abc'}
-                promotion-expiry={'2100-01-01T00:00:00.000Z'}
-                rate-category-id={'rate-category-1'}
+                type={type}
+                cancellation-code={cancellationCode}
+                merchant-room-id={merchantRoomId}
+                promotion-id={promotion?.id ?? ''}
+                promotion-expiry={promotion?.expiry ?? ''}
+                rate-category-id={rateCategoryId}
               />
             </Room>
           ),
