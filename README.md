@@ -41,18 +41,31 @@ Set Hotel information using `<pf-hotel-meta>` tag:
 </pf-hotel-meta>
 ```
 
+Notes:
+- partner-rating: optional attribute
+
 Display Room Price Freeze Buttons tag `<pf-room-button>`:
 ```html
 <pf-room-button
     room-id="room-123"
     name="Priced Room"
-    merchant-id="m890"
+    type="room-type-123"
     beds="1"
     price="200.00"
     availability="9"
+    merchant-id="m890"
+    merchant-room-id="merchant-room-456"
+    cancellation-code="CODE_789"
+    rate-category-id="rate-category-123"
+    addons="breakfast,other addons"
+    promotion-id="promo-abc"
+    promotion-expiry="2030-04-20T15:30:30Z"
     image-url="/a/i/room/8.jpg">
 </pf-room-button>
 ```
+Notes:
+- merchant-room-id: optional attribute
+- promotion-expiry and promotion-id: provide both or neither
 
 ### Debugging:
 
