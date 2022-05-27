@@ -9,7 +9,16 @@
       "details": ["Breakfast Included"],
       "price": {
         "amount": "80"
-      }
+      },
+      "type": "room type A",
+      "cancellationCode": "cancellation-code-a",
+      "merchantId": "merchant-a",
+      "merchantRoomId": "merchant-room-a",
+      "promotion": {
+        "id": "promotion-id-a",
+        "expiry": "2024-04-20T15:30:30Z"
+      },
+      "rateCategoryId": "rate-category-a"
     },
     {
       "id": "8-test",
@@ -20,7 +29,16 @@
       "details": ["Free WiFi", "Breakfast Included", "Non-refundable"],
       "price": {
         "amount": "800"
-      }
+      },
+      "type": "room type b",
+      "cancellationCode": "cancellation-code-b",
+      "merchantId": "merchant-b",
+      "merchantRoomId": "merchant-room-b",
+      "promotion": {
+        "id": "promotion-id-b",
+        "expiry": "2024-04-20T15:30:30Z"
+      },
+      "rateCategoryId": "rate-category-b"
     },
     {
       "id": "9-test",
@@ -30,7 +48,16 @@
       "details": ["Free WiFi", "Pay nothing until 2022", "Non-refundable"],
       "price": {
         "amount": "199"
-      }
+      },
+      "type": "room type c",
+      "cancellationCode": "cancellation-code-c",
+      "merchantId": "merchant-c",
+      "merchantRoomId": "merchant-room-c",
+      "promotion": {
+        "id": "promotion-id-c",
+        "expiry": "2024-04-20T15:30:30Z"
+      },
+      "rateCategoryId": "rate-category-c"
     },
     {
       "id": "10-test",
@@ -40,7 +67,16 @@
       "details": ["Free WiFi", "Breakfast Included", "Non-refundable"],
       "price": {
         "amount": "208"
-      }
+      },
+      "type": "room type d",
+      "cancellationCode": "cancellation-code-d",
+      "merchantId": "merchant-d",
+      "merchantRoomId": "merchant-room-d",
+      "promotion": {
+        "id": "promotion-id-d",
+        "expiry": "2024-04-20T15:30:30Z"
+      },
+      "rateCategoryId": "rate-category-d"
     }
   ]
 }
