@@ -43,8 +43,40 @@
 <!-- Hopper SDK: Room Buttons -->
 <section class="fade">
   <p>Demo Buttons</p>
-  <div class="room"><pf-room-button room-id="a123" name="Priced Room" beds="1" price="200.00" availability="9" image-url="/a/i/room/8.jpg" merchant-id="m890"></pf-room-button></div>
-  <div class="room"><pf-room-button room-id="b123" name="Knockout" beds="1" price="400.00" availability="0" image-url="/a/i/room/9.jpg" merchant-id="m890"></pf-room-button></div>
+  <div class="room">
+    <pf-room-button
+      room-id="a123"
+      name="Priced Room"
+      beds="1"
+      price="200.00"
+      availability="9"
+      image-url="/a/i/room/8.jpg"
+      merchant-id="m890"
+      cancellation-code="cancellation-code"
+      merchant-room-id="merchant-room-1"
+      type="room-type-1"
+      promotion-id="promotion-abc"
+      promotion-expiry="2100-01-01T00:00:00.000Z"
+      rate-category-id="rate-category-1">
+    </pf-room-button>
+  </div>
+  <div class="room">
+    <pf-room-button
+      room-id="b123"
+      name="Knockout"
+      beds="1"
+      price="400.00"
+      availability="0"
+      image-url="/a/i/room/9.jpg"
+      merchant-id="m890"
+      cancellation-code="cancellation-code"
+      merchant-room-id="merchant-room-1"
+      type="room-type-1"
+      promotion-id="promotion-abc"
+      promotion-expiry="2100-01-01T00:00:00.000Z"
+      rate-category-id="rate-category-1">
+    </pf-room-button>
+  </div>
 </section>
 </body>
 </html>

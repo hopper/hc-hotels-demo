@@ -79,6 +79,12 @@ export default function HotelRooms({ hotel, delay }: Props) {
                 merchant-id={'m123'}
                 image-url={picture}
                 availability={availability}
+                type={'room-type-1'}
+                cancellation-code={'cancellation-code'}
+                merchant-room-id={'merchant-room-1'}
+                promotion-id={'promotion-abc'}
+                promotion-expiry={'2100-01-01T00:00:00.000Z'}
+                rate-category-id={'rate-category-1'}
               />
             </Room>
           ),

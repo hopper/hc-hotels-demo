@@ -17,12 +17,18 @@ declare namespace JSX {
       'child-count'?: string;
     };
     'pf-room-button': {
+      'room-id': string;
       name: string;
+      type: string;
       price: string;
       'merchant-id': string;
       beds?: number;
       availability?: number;
-      'price-url'?: string;
+      'merchant-room-id'?: string;
+      'cancellation-code': string;
+      'promotion-id'?: string;
+      'promotion-expiry'?: string;
+      'rate-category-id': string;
     };
   }
 }
