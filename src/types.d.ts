@@ -30,5 +30,10 @@ declare namespace JSX {
       'promotion-expiry'?: string;
       'rate-category-id': string;
     };
+    'pf-user-meta': {
+      'user-id': string;
+      'phone-number': string;
+      'email': string;
+    }
   }
 }
