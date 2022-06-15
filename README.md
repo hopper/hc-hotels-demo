@@ -40,19 +40,9 @@ Set Hotel information using `<pf-hotel-meta>` tag:
     address-country="US">
 </pf-hotel-meta>
 ```
+
 Notes:
 - partner-rating: optional attribute
-
-Set user data using `<pf-user-meta>` tag:
-```html
-<pf-user-meta
-    user-id="u567"
-    email="example@example.com"
-    phone-number="+1 206 555 0100">
-</pf-user-meta>
-```
-Notes:
-- this tag is optional when user information is unavailable
 
 Display Room Price Freeze Buttons tag `<pf-room-button>`:
 ```html
