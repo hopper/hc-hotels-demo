@@ -41,6 +41,7 @@ export default function HotelRooms({ hotel, delay }: Props) {
     <>
       <RoomFilter dispatch={dispatch} minCheckin={state.today} {...state} />
 
+      <pf-user-meta user-id="u567" email="example@example.com" phone-number="+1 206 555 0100"></pf-user-meta>
       <pf-booking-meta
         currency={'USD'}
         check-in={checkin.toISOString().substring(0, 10)}
