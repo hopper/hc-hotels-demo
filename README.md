@@ -99,3 +99,12 @@ document.addEventListener('pf-modal-close', function(evt) {
   console.info("Closed Price Freeze Modal", evt.detail);
 });
 ```
+
+<details>
+  <summary>Running it locally:</summary>
+
+1. Install [pnpm](https://pnpm.io/)
+2. Type <code>pnpm install</code> in the root directory
+3. Type <code>pnpm dev</code> in the same directory
+4. Open <code>http://localhost:3000/</code> in a web browser
+</details>
