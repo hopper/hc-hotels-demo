@@ -30,8 +30,8 @@ export default function Room({
         ))}
       </ul>
       <div className="Room-pricing">
-        {currency.symbol}
-        {price.amount}
+        <b>{currency.symbol}{price.amount}</b>
+        <span>{'night'}</span>
       </div>
       <div className="Room-select">{children}</div>
     </article>
