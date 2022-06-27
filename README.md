@@ -79,12 +79,16 @@ Display Room Price Freeze Buttons tag `<pf-room-button>`:
     addons="breakfast,other addons"
     promotion-id="promo-abc"
     promotion-expiry="2030-04-20T15:30:30Z"
-    image-url="/a/i/room/8.jpg">
+    image-url="/a/i/room/8.jpg"
+    ext-attr-room-offer-id="room-offer-123">
 </pf-room-button>
 ```
 Notes:
 - merchant-room-id: optional attribute
 - promotion-expiry and promotion-id: provide both or neither
+- arbitrary metadata can be attached to purchased price freezes by including attributes prefixed with `ext-attr-`. 
+  in the above example, a purchased price freeze will have the following external attributes associated with it:
+    `{ "room-offer-id": "room-offer-123" }`
 
 ### Debugging:
 
