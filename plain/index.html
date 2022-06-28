@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 
-  <script>const locale = (new URLSearchParams(window.location.search)).get("locale")</script>
+  <script>const [partner,locale]=(function(q){return [q.get("partner"),q.get("locale")]})(new URLSearchParams(window.location.search))</script>
 
   <!-- Hopper Load SDK-->
   <script>
     (function(p,l,h,s,d){d=document;s=d.createElement("script");s.src=(h||"https://sdk.staging.hopper.com")+"/cloud/hotels/v1/"+p+"/"+(l||"en")+".js";s.type="module";s.async=!0;d.head.appendChild(s)})
-    ("DEMO", locale)
+    (partner || "DEMO", locale)
   </script>
 
   <STYLE>

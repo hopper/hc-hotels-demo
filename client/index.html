@@ -6,9 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="/styles/demo.css">
 
+  <script>const [partner,locale]=(function(q){return [q.get("partner"),q.get("locale")]})(new URLSearchParams(window.location.search))</script>
+
   <script>
     (function(p,l,h,s,d){d=document;s=d.createElement("script");s.src=(h||"https://sdk.staging.hopper.com")+"/cloud/hotels/v1/"+p+"/"+(l||"en")+".js";s.type="module";s.async=!0;d.head.appendChild(s)})
-    ("DEMO")
+    (partner || "DEMO", locale)
   </script>
 
   <script type="module" src="/src/main.tsx"></script>
