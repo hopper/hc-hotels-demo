@@ -95,20 +95,61 @@ Notes:
 Non-production versions of the SDK will log validation warnings when invalid attributes are applied to the above elements.
 
 ### Event Listening:
+The SDK emits events on the document element. Supplemental data is included on events via the `detail` property.
+
+Offers are included in 2 forms:
+- `PartialOffer` with reduced information optimized to reduce response latency
+- `FullOffer` containing all offer information.
+
+#### Example:
 ```js
-document.addEventListener('pf-init', function() {
-  console.info("Hopper SDK Initialized");
+document.addEventListener('pf-offer', function(event) {
+  console.info("Price Freeze Offer", event.detail);
 });
 
-document.addEventListener('pf-offer', function(evt) {
-  console.info("Price Freeze Offer", evt.detail);
-});
-
-document.addEventListener('pf-modal-open', function(evt) {
-  console.info("Opened Price Freeze Modal", evt.detail);
-});
-
-document.addEventListener('pf-modal-close', function(evt) {
-  console.info("Closed Price Freeze Modal", evt.detail);
-});
+/*
+  Sample event detail containing a partial offer for the pf-offer event:
+  {
+    "offer": {
+      "offer": {
+        "hotel_id": "hotel-1",
+        "room_id": "room-1",
+        "id": "b3a18b7f-8628-4bee-9736-197a3f15e9c8",
+        "merchant_id": "merchant-3",
+        "merchant_room_id": "merchant-room-456",
+        "full_offer_type": "room_deposit_offer",
+        "conditions": {
+          "currency": "CAD",
+          "frozen_price": "150.00",
+          "deposit": "30.00",
+          "cap": "75.00",
+          "offer_expiry": "2022-07-18T18:33:37.890Z",
+          "freeze_expiry": "PT72H"
+        }
+      },
+      "signature": "4HF9wjGm8bIY6g2xyWf6V3EQ9umkt79wE8hli7WDyU8",
+      "type": "signed_base_offer"
+    }
+  }
+*/
 ```
+#### Events
+`pf-init`
+- emitted once when the SDK is loaded and initialized in the browser (all elements have been defined).
+  - detail: none
+
+`pf-offer`
+- emitted each time an offer (available or unavailable) is loaded for a `pf-room-button` element in the page
+    - detail: { offer: `PartialOffer` }
+
+`pf-modal-open`
+- emitted when the modal is opened
+    - detail: { offer: `FullOffer` }
+
+`pf-modal-close`
+- emitted when the modal is closed
+    - detail: none
+
+`pf-purchase`
+  - emitted on successful purchase from the modal application
+    - detail: { offer: `FullOffer` }
