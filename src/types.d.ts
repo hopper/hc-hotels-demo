@@ -32,6 +32,8 @@ declare namespace JSX {
     };
     'pf-user-meta': {
       'user-id': string;
+      'first-name': string;
+      'last-name': string;
       'phone-number': string;
       'email': string;
     }
