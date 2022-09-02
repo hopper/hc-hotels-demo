@@ -131,10 +131,10 @@ export interface InitState {
 
 export function initState({ today, hotel }: InitState): HotelState {
   const [checkin, checkout] = [new Date(), new Date()];
-  // set check in date to be 6 days after today
-  checkin.setDate(today.getDate() + 6);
-  // set check out date to be 8 days after today
-  checkout.setDate(today.getDate() + 8);
+  // set check in date to be 14 days after today
+  checkin.setDate(today.getDate() + 14);
+  // set check out date to be 17 days after today
+  checkout.setDate(today.getDate() + 17);
   return {
     today,
     hotel,
