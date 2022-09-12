@@ -58,7 +58,7 @@ Set user data using `<pf-user-meta>` tag:
     user-id="u567"
     first-name="John"
     last-name="Doe"
-    email="example@example.com"
+    email="name@example.com"
     phone-number="+1 206 555 0100">
 </pf-user-meta>
 ```
