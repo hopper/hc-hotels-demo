@@ -8,7 +8,8 @@
       "availability": 0,
       "details": ["Breakfast Included"],
       "price": {
-        "amount": "80"
+        "amount": "80",
+        "taxes": "8"
       },
       "type": "room type A",
       "cancellationCode": "cancellation-code-a",
@@ -28,7 +29,8 @@
       "availability": 4,
       "details": ["Free WiFi", "Breakfast Included", "Non-refundable"],
       "price": {
-        "amount": "800"
+        "amount": "800",
+        "taxes": "80"
       },
       "type": "room type b",
       "cancellationCode": "cancellation-code-b",
@@ -47,7 +49,8 @@
       "beds": 1,
       "details": ["Free WiFi", "Pay nothing until 2022", "Non-refundable"],
       "price": {
-        "amount": "199"
+        "amount": "199",
+        "taxes": "20"
       },
       "type": "room type c",
       "cancellationCode": "cancellation-code-c",
@@ -66,7 +69,8 @@
       "beds": 2,
       "details": ["Free WiFi", "Breakfast Included", "Non-refundable"],
       "price": {
-        "amount": "208"
+        "amount": "208",
+        "taxes": "20"
       },
       "type": "room type d",
       "cancellationCode": "cancellation-code-d",

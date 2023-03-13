@@ -5,8 +5,8 @@ export interface Props {
   name: string;
   picture: string;
   details: Array<string>;
-  price: { amount: string };
-  currency?: { symbol: string };
+  price: number;
+  currency: string;
   availability?: number;
   children?: ReactNode;
 }
@@ -18,7 +18,7 @@ export default function Room({
   details,
   price,
   children,
-  currency = { symbol: '$' },
+  currency,
 }: Props) {
   return (
     <article className="Room" id={id}>
@@ -30,7 +30,10 @@ export default function Room({
         ))}
       </ul>
       <div className="Room-pricing">
-        <b>{currency.symbol}{price.amount}</b>
+        <b>
+          {currency}
+          {price}
+        </b>
         <span>{'night'}</span>
       </div>
       <div className="Room-select">{children}</div>

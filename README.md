@@ -11,9 +11,9 @@
 </details>
 
 ### Example Sites:
-- [Simple Example](https://hotels.hc-demos.com/plain/)
-- [React "Isomorphic" Loading](https://hotels.hc-demos.com/isomorphic/)
-- [React Client Only Loading](https://hotels.hc-demos.com/client/)
+- [Simple Example](https://hotels-demo.cloud.hopper.com/plain/)
+- [React "Isomorphic" Loading](https://hotels-demo.cloud.hopper.com/isomorphic/)
+- [React Client Only Loading](https://hotels-demo.cloud.hopper.com/client/)
 
 ### Simple Integration:
 
@@ -29,8 +29,8 @@ Set booking data using `<pf-booking-meta>` tag:
 ```html
 <pf-booking-meta
     currency="USD"
-    check-in="2022-12-12"
-    check-out="2022-12-20"
+    check-in="2023-12-12"
+    check-out="2023-12-20"
     room-count="1"
     adult-count="2"
     child-count="1">
@@ -42,11 +42,13 @@ Set Hotel information using `<pf-hotel-meta>` tag:
 <pf-hotel-meta
     hotel-id="h123"
     name="Example Hotel"
-    star-rating="4.5"
+    star-rating="4.5" //optional
     partner-rating="5.1"
     address-city="Neddick"
     address-line="123 Main Street"
-    address-country="US">
+    address-country="US"
+    check-in-local-time="15:00" //optional
+    check-in-time-offset="+02:00">
 </pf-hotel-meta>
 ```
 Notes:

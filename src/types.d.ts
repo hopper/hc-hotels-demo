@@ -21,6 +21,7 @@ declare namespace JSX {
       name: string;
       type: string;
       price: string;
+      'price-inclusive'?: string;
       'merchant-id': string;
       beds?: number;
       availability?: number;
@@ -35,7 +36,7 @@ declare namespace JSX {
       'first-name': string;
       'last-name': string;
       'phone-number': string;
-      'email': string;
-    }
+      email: string;
+    };
   }
 }
