@@ -54,7 +54,7 @@ interface HotelRoom {
   id: string;
   name: string;
   picture: string;
-  price: { amount: string };
+  price: { amount: string, taxes: string };
   details: Array<string>;
   beds: number;
   availability: number;
@@ -66,7 +66,7 @@ interface HotelRoom {
   promotion?: {
     id: string;
     expiry: string;
-  },
+  };
 }
 
 export interface Hotel {

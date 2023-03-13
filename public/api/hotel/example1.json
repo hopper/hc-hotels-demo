@@ -11,7 +11,8 @@
       "availability": 8,
       "details": ["Free WiFi", "Breakfast Included"],
       "price": {
-        "amount": "170"
+        "amount": "170",
+        "taxes": "17"
       },
       "type": "room type 1",
       "cancellationCode": "cancellation-code-1",
@@ -29,7 +30,7 @@
       "picture": "/a/i/room/2.jpg",
       "beds": 1,
       "availability": 2,
-      "details": ["Free WiFi", "Breakfast Included", "Non-refundable"],
+      "details": ["Free WiFi", "Breakfast Included", "Non-refundable", "Taxes and Fees Not Inclusive"],
       "price": {
         "amount": "230"
       },
@@ -55,7 +56,8 @@
         "Free cancellation before 2030"
       ],
       "price": {
-        "amount": "227"
+        "amount": "227",
+        "taxes": "22.6"
       },
       "type": "room type 3",
       "cancellationCode": "cancellation-code-3",
@@ -75,7 +77,8 @@
       "availability": 0,
       "details": ["Free WiFi", "Breakfast Included", "Non-refundable"],
       "price": {
-        "amount": "230"
+        "amount": "230",
+        "taxes": "23.23"
       },
       "type": "room type 4",
       "cancellationCode": "cancellation-code-4",
@@ -95,7 +98,8 @@
       "availability": 8,
       "details": ["Free WiFi", "Breakfast Included"],
       "price": {
-        "amount": "218"
+        "amount": "218",
+        "taxes": "21.8"
       },
       "type": "room type 5",
       "cancellationCode": "cancellation-code-5",
@@ -115,7 +119,8 @@
       "availability": 8,
       "details": ["Free WiFi", "Breakfast Included"],
       "price": {
-        "amount": "230"
+        "amount": "230",
+        "taxes": "23.23"
       },
       "type": "room type 6",
       "cancellationCode": "cancellation-code-6",

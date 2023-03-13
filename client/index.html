@@ -6,12 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="/styles/demo.css">
 
-  <script>const [partner,locale]=(function(q){return [q.get("partner"),q.get("locale")]})(new URLSearchParams(window.location.search))</script>
+  <script>const [partner,locale, environment]=(function(q){return [q.get("partner"),q.get("locale"),q.get("environment")]})(new URLSearchParams(window.location.search))</script>
 
   <script>
-    (function(p,l,h,s,d){d=document;s=d.createElement("script");s.src=(h||"https://sdk.staging.hopper.com")+"/cloud/hotels/v1/"+p+"/"+(l||"en")+".js";s.type="module";s.async=!0;d.head.appendChild(s)})
-    (partner || "DEMO", locale)
+    (function(p,l,e,h,s,d){d=document;s=d.createElement("script");s.src=(h||e === 'production' ? "https://sdk.hopper.com" : "https://sdk.staging.hopper.com")+"/cloud/hotels/v1/"+p+"/"+(l||"en")+".js";s.type="module";s.async=!0;d.head.appendChild(s)})
+    (partner || "DEMO", locale, environment)
   </script>
+
+<!-- <script type="module" async src="http://localhost:3000/src/sdk.ts"></script> -->
+
 
   <script type="module" src="/src/main.tsx"></script>
 </head>
@@ -29,7 +32,7 @@
       </div>
       <!-- Hopper SDK: User Data if logged in - OPTIONAL -->
       <!-- <pf-user-meta user-id="u567" first-name="John" last-name="Doe" email="example@example.com" phone-number="+1 206 555 0100"></pf-user-meta> -->
-      <pf-hotel-meta hotel-id="h123" name="Example Hotel" star-rating="4.5" partner-rating="5.4" address-line="100 Main Street" address-city="Neddick" address-country="US"></pf-hotel-meta>
+      <pf-hotel-meta hotel-id="h123" name="Example Hotel" star-rating="4.5" partner-rating="5.4" address-line="100 Main Street" address-city="Neddick" address-country="US" check-in-local-time="15:00" check-in-time-offset="2"></pf-hotel-meta>
       <div class="PDPHero-header">
         <h1 class="PDPHero-name">Example Hotel <span class="PDPHero-starRating" role="img" aria-label="4.5 Star Hotel" style="--rating:4.5"></span></h1>
         <div class="PDPHero-address">100 Main Street Neddick, ME 01234, United States</div>
