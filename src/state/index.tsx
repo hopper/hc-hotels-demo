@@ -9,19 +9,19 @@ export type ActionTypes =
   | ReturnType<typeof fetchedHotelRooms>;
 
 export const updateCheckin = (date: Date) =>
-  ({ type: 'checkin', date } as const);
+  ({ type: 'checkin', date }) as const;
 export const updateCheckout = (date: Date) =>
-  ({ type: 'checkout', date } as const);
+  ({ type: 'checkout', date }) as const;
 export const updateRooms = (count: number) =>
-  ({ type: 'rooms', count } as const);
+  ({ type: 'rooms', count }) as const;
 export const updateAdults = (count: number) =>
-  ({ type: 'adults', count } as const);
+  ({ type: 'adults', count }) as const;
 
 export const loading = (loading: boolean) =>
-  ({ type: 'loading', loading } as const);
+  ({ type: 'loading', loading }) as const;
 
 export const fetchedHotelRooms = (hotel: Hotel, more: boolean) =>
-  ({ type: 'fetchedHotelRooms', hotel, more } as const);
+  ({ type: 'fetchedHotelRooms', hotel, more }) as const;
 
 export const requestHotelRooms = (
   dispatch: Dispatch<ActionTypes>,
@@ -54,7 +54,7 @@ interface HotelRoom {
   id: string;
   name: string;
   picture: string;
-  price: { amount: string, taxes: string };
+  price: { amount: string; taxes: string };
   details: Array<string>;
   beds: number;
   availability: number;

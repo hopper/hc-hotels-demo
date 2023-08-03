@@ -55,7 +55,9 @@
 }
 
 .PDPHero-name {
-  font: bold 2.5rem 'Oswald', sans-serif;
+  font:
+    bold 2.5rem 'Oswald',
+    sans-serif;
   margin: 0;
   padding: 0.3rem 0 0;
 }
@@ -82,7 +84,9 @@
 }
 
 .PDPHero-address {
-  font: lighter 1rem 'Oswald', sans-serif;
+  font:
+    lighter 1rem 'Oswald',
+    sans-serif;
 }
 
 @media (max-width: 1024px) {

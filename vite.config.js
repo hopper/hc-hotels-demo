@@ -1,6 +1,6 @@
 const { resolve } = require('path');
 const { defineConfig } = require('vite');
-const react = require('@vitejs/plugin-react');
+const react = require('@vitejs/plugin-react-swc');
 
 module.exports = defineConfig({
   plugins: [react()],

@@ -186,7 +186,11 @@ export default function HotelRooms({ hotel, delay }: Props) {
                 price={(
                   Number(price.amount) * exchangeRateFromUSD[currency]
                 ).toString()}
-                price-inclusive={price.taxes ? (Number(price.amount) + Number(price.taxes)).toString() : ''}
+                price-inclusive={
+                  price.taxes
+                    ? (Number(price.amount) + Number(price.taxes)).toString()
+                    : ''
+                }
                 merchant-id={merchantId}
                 image-url={picture}
                 availability={availability}
@@ -198,7 +202,7 @@ export default function HotelRooms({ hotel, delay }: Props) {
                 rate-category-id={rateCategoryId}
               />
             </Room>
-            ),
+          ),
         )}
       </div>
 

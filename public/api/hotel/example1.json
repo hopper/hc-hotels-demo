@@ -30,7 +30,12 @@
       "picture": "/a/i/room/2.jpg",
       "beds": 1,
       "availability": 2,
-      "details": ["Free WiFi", "Breakfast Included", "Non-refundable", "Taxes and Fees Not Inclusive"],
+      "details": [
+        "Free WiFi",
+        "Breakfast Included",
+        "Non-refundable",
+        "Taxes and Fees Not Inclusive"
+      ],
       "price": {
         "amount": "230"
       },
