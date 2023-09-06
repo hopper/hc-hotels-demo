@@ -2,7 +2,7 @@
   "name": "hc-hotels-demo",
   "private": true,
   "version": "1.0.0",
-  "packageManager": "pnpm@8",
+  "packageManager": "pnpm@8.7.4",
   "scripts": {
     "dev": "vite",
     "dist": "tsc && vite build",
