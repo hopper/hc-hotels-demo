@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@types/react-dom": "18.2.7",
-    "@types/react": "18.2.21",
+    "@types/react": "18.2.22",
     "@vitejs/plugin-react-swc": "^3.3.2",
     "prettier": "3.0.3",
     "typescript": "^5.2.2",
