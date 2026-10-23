@@ -19,7 +19,7 @@
 
 ### Simple Integration:
 
-Include following javascript snippet in `<head>`:
+Include the following javascript snippet in `<head>`:
 
 ```html
 <script>
